@@ -1,0 +1,48 @@
+.container{
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+body{
+ background: #e3e3e3;
+ padding: 60px;
+}
+
+p{
+  margin: 0;
+  padding: 90px 95px;
+  font-size: 150%;
+  font-weight: bold;
+  color:#fff;
+  text-shadow: 1px 1px #333;
+}
+
+ .box{
+  height:200px;
+  width: 200px;
+  margin:20px;
+  background: red;
+  border-radius: 100%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.box:hover{
+  box-shadow: 2px 2px 20px #000;
+}
+
+.box:active{
+  box-shadow: 2px 2px 10px #000;
+}
+#box1{background: pink;}
+#box2{background: lightblue;}
+#box3{background: firebrick;}
+#box4{background: yellowgreen;}
+#box5{background: goldenrod;}
+#box6{background: brown;}
+#box7{background: grey;}
+#box7{background: seagreen;}
+#box8{background: slateblue;}
+#box9{background: violet;}
+#box10{background: aqua}
