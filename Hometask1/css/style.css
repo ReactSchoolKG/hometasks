@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1379px;
+    height: 600px;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ball{
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 100%;
+    background: linear-gradient(to bottom right, red, yellow);
+    text-align: center;
+    padding: 100px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
