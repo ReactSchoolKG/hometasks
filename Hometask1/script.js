@@ -5,8 +5,8 @@ const renderElements = (targ, elem, num) => {
       const newElement = document.createElement(elem);
 
       newElement.textContent = i;
-      newElement.classList.add('addedElement');
-      newElement.addEventListener('click', getValue_1);
+      newElement.classList.add(`addedElement`);
+      newElement.addEventListener(`click`, getValue_1);
 
       target.appendChild(newElement);
     }
