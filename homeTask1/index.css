@@ -1,0 +1,22 @@
+div.parent{
+    display: flex;
+    width: 300px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+
+div.blockElement {
+    height: 50px;
+    width: 50px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
