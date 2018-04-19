@@ -17,9 +17,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.btn:hover{
     cursor: pointer;
+}
+.btn:not(.red):hover{
     background-color: rgba(152, 251, 152, 0.45);
-    transition: 100ms;
+    transition: background-color 250ms;
+}
+.red{
+    background: rgba(255, 0, 0, 0.2);
+    transition: background-color 200ms;
 }
