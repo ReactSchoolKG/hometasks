@@ -1,0 +1,54 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+div {
+  background-color: rgb(255, 0, 0);
+  height: 20vw;
+  position: relative;
+  text-align: center;
+  width: 20vw;
+}
+
+p {
+  background-color: rgb(255, 251, 0);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60%;
+  width: 60%;
+}
+
+button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 40%;
+  width: 40%;
+  background-color: rgb(0, 255, 85);
+}
+
+.common {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.common:hover {
+  cursor: pointer;
+}
