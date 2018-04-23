@@ -1,0 +1,19 @@
+#div{
+  background: firebrick;
+  padding: 40px;
+  height: 200px;
+  width: 500px;
+  margin: 0 auto;
+}
+#paragraph{
+  background: #eee;
+  padding: 60px;
+}
+#btn{
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  background: #343434;
+  color:#fff;
+  cursor:pointer;
+}

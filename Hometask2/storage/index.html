@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hometask#2/Storage</title>
+  <style>
+    body{
+      background: #e4e4e4;
+    }
+    .container{
+      width: 600px;
+      padding: 50px;
+      margin:0 auto;
+      background:#d4d4d4;
+    }
+    .container>div{
+      padding:10px 0px;  
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="local"></div>
+    <div id="session"></div>
+    <button id="btn">Add</button>
+  </div>
+
+<script>
+  const local = document.getElementById('local');
+  const session = document.getElementById('session');
+  const btn = document.getElementById('btn');
+
+  const localData = localStorage.getItem('localInfo');
+  const sessionData = sessionStorage.getItem('sessionInfo');
+  
+  window.onload = () => {
+    // localStorage.setItem('localInfo', 'from local');
+    // sessionStorage.setItem('sessionInfo', 'from session');
+
+    if(!localData){
+      local.innerHTML = 'no local';
+    } else {
+      local.textContent = localData;
+    }
+
+    if(!sessionData){
+      session.textContent = 'no session';
+    } else {
+      session.textContent = sessionData;
+    }
+  }
+
+  btn.addEventListener('click', () =>{
+    localStorage.setItem('localInfo','KindGeek');
+    local.textContent = 'KindGeek';
+    sessionStorage.setItem('sessionInfo','KindGeek');
+    session.textContent = 'KindGeek';
+  });
+  
+
+</script>
+</body>
+</html>
