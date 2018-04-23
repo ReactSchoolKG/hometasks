@@ -1,0 +1,13 @@
+div {
+    height: 200px;
+    width: 200px;
+    background-color: #ccc;
+}
+
+p{
+	background-color: gray;
+}
+button{
+	display: block;
+	margin: 0 auto;
+}
