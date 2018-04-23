@@ -1,0 +1,31 @@
+div{
+    background-color: #abb3c0;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 1px solid navy;
+    margin: auto;
+    padding: 10px;
+
+
+}
+
+p {
+    background-color: #8f96a2;
+    position: absolute;
+    display: block;
+    border: 1px solid navy;
+    width: 150px;
+    height:150px;
+    padding: 10px;
+    top: 32px;
+    left: 50px;
+}
+button{
+    position: absolute;
+    border: 1px solid navy;
+    padding: 10px;
+    top: 60px;
+    left: 45px;
+
+}

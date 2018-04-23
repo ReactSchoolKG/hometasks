@@ -1,7 +1,8 @@
 document.querySelector(".parent").addEventListener("click", function(e){
-   if(e.target.className === "blockElement") {
-       console.log(e.target.innerHTML);
-   }
+
+    if(e.target.className === "blockElement"){
+        console.log(e.target.innerHTML);
+    }
 });
 
 function eventListenerList(list, event, func){
@@ -13,8 +14,9 @@ function eventListenerList(list, event, func){
 let blockElement = document.querySelectorAll(".parent .blockElement");
 
 function handleMouseMove() {
+
    let bgColor =  this.style.backgroundColor;
-   this.style.backgroundColor = (bgColor === 'blue')? 'navy' : 'blue';
+    this.style.backgroundColor = (bgColor === 'blue')? 'navy' : 'blue';
 }
 
 eventListenerList(blockElement, "mouseover", handleMouseMove);
