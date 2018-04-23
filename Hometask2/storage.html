@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2 (second part)</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <button id="btn">Add info to storages!</button>
+    <script>
+    const   div1 = document.getElementById('div1'),
+            div2 = document.getElementById('div2'),
+            addInfoBtn = document.getElementById('btn');
+
+    function ready(){
+        let localStorageInfo = localStorage.getItem('localInfo');
+        let sessionSrorageInfo = sessionStorage.getItem('sessionInfo');
+
+        if (localStorageInfo !== null) {
+            div1.innerText = localStorageInfo;
+        }
+        else {
+            div1.innerText = "no local";
+        }
+
+        if(sessionSrorageInfo !== null){
+            div2.innerText = sessionSrorageInfo;
+        }
+        else {
+            div2.innerText = "no session";
+        }
+        addInfoBtn.addEventListener('click',function(e){
+            localStorage.setItem('localInfo','some info in local');
+            sessionStorage.setItem('sessionInfo','some info in session')
+        })
+
+    }
+    
+    
+    document.addEventListener("DOMContentLoaded", ready)
+    </script>
+</body>
+</html>
