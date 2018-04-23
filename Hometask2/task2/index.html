@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+  	*{
+  		font-size: 30px;
+  	}
+  	button{
+  		background-color: white;
+  		padding: 10px;
+  	}
+  </style> 
+</head>
+
+<body>
+	<div class="container">
+		<div id="local">from local</div>
+		<div id="session">No storage</div>
+		<button>Click me</button>		
+	</div>
+  <script>
+  	var local = document.querySelector("#local");
+  	var session = document.querySelector("#session");
+  	var button = document.querySelector("button");
+
+  	window.onload = function() {
+  		var localData = localStorage.getItem('localInfo');
+  		var sessionData = localStorage.getItem('sessionInfo');
+  		if(localData){
+  			local.innerHTML=localData;
+  		} else{
+  			local.innerHTML="no local"
+  		}
+
+  		if(sessionData){
+  			session.innerHTML=sessionData;
+  		} else{
+  			session.innerHTML="no session"
+  		}
+  	}
+
+  	button.addEventListener('click', function(){
+	    localStorage.setItem('localInfo','from local');
+	    local.innerHTML = "from local";
+	    sessionStorage.setItem('sessionInfo','from session');
+	    session.innerHTML = 'from session';
+	});
+  	
+  </script>
+</body>
+</html>
