@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="local"></div>
+	<div id="session"></div>
+	<button>Кнопка</button>
+	<script>
+
+ 	window.onload = function() {
+
+	 	 var localDiv = document.querySelector('#local');
+	 	 var sessionDiv = document.querySelector('#session');
+	 	 var btn = document.querySelector('button');
+
+		if (localStorage.getItem('localInfo')) {
+			localDiv.innerHTML=localStorage.getItem('localInfo');
+		}
+		else {
+			localDiv.innerHTML='no local';
+		}
+		
+		if (sessionStorage.getItem('sessionInfo')) {
+			sessionDiv.innerHTML=sessionStorage.getItem('sessionInfo');
+		}
+		else {
+			sessionDiv.innerHTML='no session';
+		}
+
+	   btn.onclick = function() {
+	   	localStorage.setItem('localInfo','from local');
+	   	localDiv.innerHTML=localStorage.getItem('localInfo');
+		sessionStorage.setItem('sessionInfo','from session');
+		sessionDiv.innerHTML=sessionStorage.getItem('sessionInfo');
+	   } 
+    }
+	</script>
+</body>
+</html>
