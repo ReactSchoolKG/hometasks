@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="local-storage"></div>
+    <div id="session-storage"></div>
+    <button>Click me</button>
+    <script>
+    	var localStor = document.querySelector("#local-storage");
+    	var sessionStor = document.querySelector("#session-storage");
+    	var button = document.querySelector("button");
+    
+    	window.onload = function() {
+            	localStor.innerHTML = localStorage.getItem('localInfo') || 'no local';
+            	sessionStor.innerHTML = sessionStorage.getItem('sessionInfo') || 'no session';
+    	}
+
+    	button.addEventListener('click', function() {
+        	localStorage.setItem('localInfo', 'from local');
+        	localStor.innerHTML = localStorage.localInfo;
+        	sessionStorage.setItem('sessionInfo', 'from session');
+        	sessionStor.innerHTML = sessionStorage.sessionInfo;
+    	});
+    </script>
+</body>
+
+</html>
