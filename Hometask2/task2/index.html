@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework2-task2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="localinfo"></div>
+      <div id="sessionInfo"></div>
+      <button id="button">Click me!</button>
+    </div>
+
+    <script>
+      const divElemLocal = document.getElementById(`localinfo`);
+      const divElemSession = document.getElementById(`sessionInfo`);
+      const buttonElem = document.getElementById(`button`);
+
+      const renderInfo = () => {
+        divElemLocal.innerHTML = localStorage[`localinfo`] || `no local`;
+        divElemSession.innerHTML = sessionStorage[`sessionInfo`] || `no session`;
+      };
+
+      buttonElem.addEventListener(`click`, () => {
+        localStorage.setItem(`localinfo`, `from local`);
+        sessionStorage.setItem(`sessionInfo`, `from session`);
+        renderInfo();
+      });
+
+      document.body.addEventListener(`load`, renderInfo());
+    </script>
+  </body>
+</html>
