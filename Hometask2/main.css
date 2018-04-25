@@ -1,0 +1,19 @@
+button{
+  background: yellow;
+  display: block;
+}
+p{
+  background: red;
+  color: #fff;
+}
+div{
+  background: #000;
+  color: #fff;
+  width: 100px;
+}
+*{
+  font-weight: 600;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
